@@ -1,0 +1,35 @@
+﻿@{
+
+}
+@model IEnumerable<netcoreApp.Models.EmpMaster>
+<style type="text/css">
+    .tblStyle {
+        border: dotted;
+        background-color:aqua;
+        padding:5px;
+    }
+</style>
+<div>
+    <table class="tblStyle">
+        <tr>
+            <td class="tblStyle">Employee Name</td>
+            <td class="tblStyle">Address</td>
+        </tr>
+        @foreach (var items in Model)
+            {
+            <tr>
+                <td class="tblStyle">
+                    <span>
+                        @items.EmpName
+                    </span>
+                </td>
+                <td class="tblStyle">
+                    <span>
+                        @items.Address
+                    </span>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
